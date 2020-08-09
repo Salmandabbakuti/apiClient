@@ -1,5 +1,5 @@
 # apiClient
-HTTP API Client
+HTTP API Client SDK bundle for easier API integration to plain html frontends
 
 #### Usage: 
 
