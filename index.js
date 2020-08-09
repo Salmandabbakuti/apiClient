@@ -1,5 +1,3 @@
-var axios = require("axios");
-
 const get = async(url, dataObj) => {
 try{
 const res = await axios.get(url,{
