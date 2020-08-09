@@ -1,5 +1,5 @@
-//var axios = require("axios")
-const baseUrl = "";
+//var axios = require("axios") comment out this line f you're using in nodejs runtime or *if you're using this module in website, provide axios browser cdn in head tag of your html
+const baseUrl = ""; //provide base url of your api i.e. 'http://localhost:8000/api'
 
 const get = async(route, dataObj) => {
 try{
