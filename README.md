@@ -5,33 +5,26 @@ HTTP API Client SDK bundle for easier API integration to plain html frontends
 
 - in your ```index.html```
 ```
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script> //axios cdn
-<script type="text/javascript" src="client.js">    //appiClient sdk bundle
+<script src="https://unpkg.com/apiclient-dev@1.0.4/index.js"></script>  //apiClient sdk bundle
 
-```
-##### provide base url:
-- in ```client.js```
-```
-const baseUrl = ""; //provide base url of your api i.e. 'http://localhost:8000/api'
 ```
 ##### In Nodejs run time:
 
-- Same module can be used in nodejs run time too by uncommenting out axios import in ```client.js```
+- Same module can be used in nodejs run time too.
 
 ```
-var axios = require('axios');
-const get = async() {
- .....
- }
-const post = async() {
-....
-}
+const { get, post } = require('apiclient-dev'); # v1.0.4 preferred
+
+async function myFunction(){
+   const {err, response } = await get("http://localhost:8000/search", {username:"salman"})
+      // your code to handle response or error here
+   }
 ```
 ##### Get request:
 
 ```
 async function users(){
-let route = "users";
+let url = "http://localhost:8000/users";
 let dataObj = {username:"salman"}
 const {err, response} = await get(route, dataObj);
 }
@@ -40,17 +33,17 @@ const {err, response} = await get(route, dataObj);
 
 ```
 async function login(){
-let route = "login";
+let url = "http://localhost:8000/login";
 let dataObj = {username:"salman", password:"12345"}
-const {err, response} = await post(route, dataObj);
+const {err, response} = await post(url, dataObj);
 }
 ```
 
 ##### Handling errors:
 ```
-const {err, response} = await get("search", {queryId:"cars"})
+const {err, response} = await get("http:localhost:8000/search", {queryId:"cars"})
 
-//const {err, response} = await post(route, dataObj);
+//const {err, response} = await post(url, dataObj);
 
 if(err) {
 console.log(`it returned error: ${err}`)
