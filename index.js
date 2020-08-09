@@ -1,5 +1,5 @@
 var axios = require("axios");
-const baseUrl = ""; //provide base url of your api i.e. 'http://localhost:8000/api'
+var baseUrl = ""; //provide base url of your api i.e. 'http://localhost:8000/api'
 
 const get = async(route, dataObj) => {
 try{
