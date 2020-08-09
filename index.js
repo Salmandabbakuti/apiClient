@@ -1,3 +1,5 @@
+var axios = require("axios");
+
 const get = async(url, dataObj) => {
 try{
 const res = await axios.get(url,{
@@ -34,3 +36,7 @@ console.log(`it returned error: ${err}`)
  console.log(`it returned response: ${response}`)
 }
 */
+module.exports = {
+    post,
+    get
+    }
