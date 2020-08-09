@@ -1,4 +1,4 @@
-//var axios = require("axios") comment out this line f you're using in nodejs runtime or *if you're using this module in website, provide axios browser cdn in head tag of your html
+var axios = require("axios");
 const baseUrl = ""; //provide base url of your api i.e. 'http://localhost:8000/api'
 
 const get = async(route, dataObj) => {
@@ -6,7 +6,6 @@ try{
 const res = await axios.get(`${baseUrl}/${route}`,{
     params: dataObj
  })
-//console.log(res)
 return {err:undefined, response: res}
 }catch(err){
 return {err:err, response: undefined}
@@ -31,10 +30,15 @@ const post = async(route, dataObj) => {
 }
 
 /*
-const {err, response} = await post("login", {username:"salmandev", password:"salman12345"})
+const {err, response} = await post("login", {username:"salman", password:"salman12345"})
 if(err) {
 console.log(`it returned error: ${err}`)
 }else{
  console.log(`it returned response: ${response}`)
 }
 */
+module.exports = {
+    baseUrl,
+    post,
+    get
+    }
