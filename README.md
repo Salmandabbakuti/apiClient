@@ -5,7 +5,8 @@ HTTP API Client SDK bundle for easier API integration to plain html frontends
 
 - in your ```index.html```
 ```
-<script src="https://unpkg.com/apiclient-dev@1.0.4/index.js"></script>  //apiClient sdk bundle
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script> //axios cdn
+<script src="https://unpkg.com/apiclient-dev-cdn@1.0.1/index.js"></script>  //apiClient sdk bundle
 
 ```
 ##### In Nodejs run time:
