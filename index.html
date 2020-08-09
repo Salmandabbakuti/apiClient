@@ -81,7 +81,7 @@ button:hover {
 <div>
 <script>
 async function trackConsignment() {
-   const {err, response} = await post("logins",{username:"salmandev",password:"salman@123"})
+   const {err, response} = await post("login",{username:"salmandev",password:"salman@123"})
    console.log(err)
    console.log(response);
   if(err) {
