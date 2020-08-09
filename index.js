@@ -34,7 +34,3 @@ console.log(`it returned error: ${err}`)
  console.log(`it returned response: ${response}`)
 }
 */
-module.exports = {
-    post,
-    get
-    }
