@@ -9,7 +9,7 @@ const res = await axios.get(`${baseUrl}/${route}`,{
 //console.log(res)
 return {err:undefined, response: res}
 }catch(err){
-return {err:err.response.data, response: undefined}
+return {err:err, response: undefined}
    }
 }
 
@@ -26,7 +26,7 @@ const post = async(route, dataObj) => {
     //console.log(res)
      return {err:undefined, response:res}
     }catch(err){
-     return {err:err.response.data, response:undefined}
+     return {err:err, response:undefined}
     }
 }
 
