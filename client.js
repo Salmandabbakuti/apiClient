@@ -14,7 +14,7 @@ return {err:err.response.data, response: undefined}
 }
 
 /*
-const {err, response} = await get()
+const {err, response} = await get("search", {queryId:"cars"})
 if(err) {
 console.log(`it returned error: ${err}`)
 else{
@@ -31,7 +31,7 @@ const post = async(route, dataObj) => {
 }
 
 /*
-const {err, response} = await post()
+const {err, response} = await post("login", {username:"salmandev", password:"salman12345"})
 if(err) {
 console.log(`it returned error: ${err}`)
 }else{
