@@ -1,9 +1,8 @@
 var axios = require("axios");
-var baseUrl = ""; //provide base url of your api i.e. 'http://localhost:8000/api'
 
-const get = async(route, dataObj) => {
+const get = async(url, dataObj) => {
 try{
-const res = await axios.get(`${baseUrl}/${route}`,{
+const res = await axios.get(url,{
     params: dataObj
  })
 return {err:undefined, response: res}
@@ -13,15 +12,15 @@ return {err:err, response: undefined}
 }
 
 /*
-const {err, response} = await get("search", {queryId:"cars"})
+const {err, response} = await get("http://localhost:8000/search", {queryId:"cars"})
 if(err) {
 console.log(`it returned error: ${err}`)
 else{
 console.log(`it returned response: ${response}`)
 */
-const post = async(route, dataObj) => {
+const post = async(url, dataObj) => {
     try{
-    let res = await axios.post(`${baseUrl}/${route}`, dataObj);
+    let res = await axios.post(url, dataObj);
     //console.log(res)
      return {err:undefined, response:res}
     }catch(err){
@@ -30,7 +29,7 @@ const post = async(route, dataObj) => {
 }
 
 /*
-const {err, response} = await post("login", {username:"salman", password:"salman12345"})
+const {err, response} = await post("http://localhost:8000/login", {username:"salman", password:"salman12345"})
 if(err) {
 console.log(`it returned error: ${err}`)
 }else{
@@ -38,7 +37,6 @@ console.log(`it returned error: ${err}`)
 }
 */
 module.exports = {
-    baseUrl,
     post,
     get
     }
