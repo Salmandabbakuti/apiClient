@@ -12,7 +12,7 @@ HTTP API Client SDK bundle for easier API integration to plain html frontends
 ##### In Nodejs run time:
 
 - Same module can be used in nodejs run time too.
-- 
+
 ###### Installation:
 
 ```
