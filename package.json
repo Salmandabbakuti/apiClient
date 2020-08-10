@@ -1,6 +1,6 @@
 {
-  "name": "apiclient",
-  "version": "1.0.0",
+  "name": "apiclient-dev",
+  "version": "1.0.5",
   "description": "HTTP API SDK for easier integration to plain html frontends",
   "main": "index.js",
   "scripts": {

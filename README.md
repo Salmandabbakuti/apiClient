@@ -12,6 +12,12 @@ HTTP API Client SDK bundle for easier API integration to plain html frontends
 ##### In Nodejs run time:
 
 - Same module can be used in nodejs run time too.
+- 
+###### Installation:
+
+```
+npm install -g apiclient-dev
+```
 
 ```
 const { get, post } = require('apiclient-dev'); # v1.0.4 preferred
@@ -27,7 +33,7 @@ async function myFunction(){
 async function users(){
 let url = "http://localhost:8000/users";
 let dataObj = {username:"salman"}
-const {err, response} = await get(route, dataObj);
+const {err, response} = await get(url, dataObj);
 }
 ```
 ##### Post request:
